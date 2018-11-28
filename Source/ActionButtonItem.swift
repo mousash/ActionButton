@@ -126,14 +126,14 @@ open class ActionButtonItem: NSObject {
     }
         
     //MARK: - Button Action Methods
-    func buttonPressed(_ sender: UIButton) {
+    @objc func buttonPressed(_ sender: UIButton) {
         if let unwrappedAction = self.action {
             unwrappedAction(self)
         }
     }
     
     //MARK: - Gesture Recognizer Methods
-    func labelTapped(_ gesture: UIGestureRecognizer) {
+    @objc func labelTapped(_ gesture: UIGestureRecognizer) {
         if let unwrappedAction = self.action {
             unwrappedAction(self)
         }
